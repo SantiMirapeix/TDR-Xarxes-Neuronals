@@ -2,10 +2,10 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 
 #Importar fitxer de frases
-dir = "Dataset\Textos\sentences.csv"
+dir = "Dataset/Text/sentences.csv"
 data = pd.read_csv(dir, names=['lang', 'text'])
-
-
+print(data)
+'''
 #Filtrar text per idioma
 lang = ['spa', 'deu', 'eng', 'fra']
 data = data[data['lang'].isin(lang)]
@@ -51,3 +51,4 @@ print(data)
 
 #Escriure al fitxer antic les modificacions
 data.to_csv(dir, index=False)
+'''
